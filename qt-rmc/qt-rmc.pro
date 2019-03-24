@@ -41,12 +41,7 @@ win32 {
 QMAKE_POST_LINK += $$QMAKE_COPY $$quote($$shell_path($$copyfile)) $$quote($$shell_path($$copydest)) $$escape_expand(\\n\\t)
 
 # Copy * to bin2
-win32 {
-    copyfile = $$PWD/../bin/*
-    copydest = $$PWD/../bin2
-} else {
-    copyfile = $$PWD/../bin/*
-    copydest = $$PWD/../bin2
-}
+copyfile = $$PWD/../bin/qt-*
+copydest = $$PWD/../bin2
 
 QMAKE_POST_LINK += $$QMAKE_COPY $$quote($$shell_path($$copyfile)) $$quote($$shell_path($$copydest)) $$escape_expand(\\n\\t)
