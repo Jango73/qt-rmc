@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+        <Users>
+		<User login="admin" password="admin" privileges="255"/>
+	</Users>
+</Configuration>
