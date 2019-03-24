@@ -145,7 +145,7 @@ bool CApplication::init(int &argc, char** argv)
 
             LOG_INFO("Server mode, Starting server");
 
-            m_pServer = new CRemoteControl(quint16(iPort));
+            m_pServer = new CRemoteControl(quint16(iPort), false);
             connect(m_pServer, SIGNAL(shutdown()), this, SLOT(onShutdownSignal()));
         }
         else if (lArgList.contains(s_sSwitch_ping))
