@@ -3,4 +3,7 @@
         <Users>
 		<User login="admin" password="admin" privileges="255"/>
 	</Users>
+        <Files>
+                <ProhibitedFile path="rmc.conf.xml"/>
+        </Files>
 </Configuration>
