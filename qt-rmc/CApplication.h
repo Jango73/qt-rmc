@@ -47,9 +47,6 @@ private:
     static const char* s_sSwitch_timeout;
     static const char* s_sSwitch_shell;
     static const char* s_sDefaultIP;
-    static int s_iDefaultPort;
-    static int s_iDefaultTimeout;
-    static int s_iDefaultMaxWaitingTime;
 
     CRemoteControl* m_pServer;
 

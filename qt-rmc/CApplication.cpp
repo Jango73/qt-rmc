@@ -33,10 +33,6 @@ const char* CApplication::s_sSwitch_timeout		= "--timeout";
 const char* CApplication::s_sSwitch_shell		= "--shell";
 const char* CApplication::s_sDefaultIP			= "127.0.0.1";
 
-int CApplication::s_iDefaultPort				= 8419;
-int CApplication::s_iDefaultTimeout				= 3000;
-int CApplication::s_iDefaultMaxWaitingTime		= 5000;
-
 CApplication::CApplication(int &argc, char** argv)
     : QCoreApplication(argc, argv)
     , m_pServer(nullptr)
@@ -49,9 +45,9 @@ bool CApplication::init(int &argc, char** argv)
     QString sLogin = "";
     QString sPassword = "";
     QString sIP = s_sDefaultIP;
-    int iPort = s_iDefaultPort;
-    int iTimeoutMS = s_iDefaultTimeout;
-    int iMaxWaitingTimeMS = s_iDefaultMaxWaitingTime;
+    int iPort = CRemoteControl::defaultPort();
+    int iTimeoutMS = CRemoteControl::defaultTimeout();
+    int iMaxWaitingTimeMS = CRemoteControl::defaultMaxWaitingTime();
     bool bKeepNewest = false;
     bool bCompCRC = false;
     bool bDetached = false;
