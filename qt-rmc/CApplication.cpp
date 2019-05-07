@@ -17,8 +17,8 @@ const char* CApplication::s_sSwitch_get			= "--get";
 const char* CApplication::s_sSwitch_put			= "--put";
 const char* CApplication::s_sSwitch_merge		= "--merge";
 const char* CApplication::s_sSwitch_getfilecrc	= "--getfilecrc";
-const char* CApplication::s_sSwitch_shutdown	= "--shutdown";
 const char* CApplication::s_sSwitch_getprivs	= "--getprivs";
+const char* CApplication::s_sSwitch_shutdown	= "--shutdown";
 
 const char* CApplication::s_sSwitch_ip			= "--ip";
 const char* CApplication::s_sSwitch_port		= "--port";
@@ -385,6 +385,7 @@ void CApplication::printUsage()
     sOut << "  " << s_sSwitch_put << ": put files to remote server\n";
     sOut << "  " << s_sSwitch_getfilecrc << ": get remote file crc\n";
     sOut << "  " << s_sSwitch_getprivs << ": get your user privileges\n";
+    sOut << "  " << s_sSwitch_shutdown << ": shut down the server (if your privileges permit it)\n";
     sOut << "\n";
     sOut << "options:\n";
     sOut << "  " << s_sSwitch_ip << ": specify server self IP or remote server IP\n";
